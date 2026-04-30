@@ -22,7 +22,6 @@ Key goals:
 ## 🖼️ Screenshots
 
 **Console Layout (Initial Implementation)**
-![Initial Design Layout](images/Basic%20Player%20layouty.PNG)
 ![Console Layout](Images/Personal%20Dashboard%20Template.png)
 *(Add screenshot once ready)*
 
