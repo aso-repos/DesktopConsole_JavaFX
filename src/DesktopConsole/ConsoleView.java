@@ -86,13 +86,13 @@ public class ConsoleView implements Initializable {
         weatherIcon.setImage(new Image(path));
     }
 
-    // Test current temperature label
+    // Test current Temperature Label
     public void updateCurrentTemp () {
 
         currentTemp.setText("27°C");
     }
 
-    // Test min/max temperature labels
+    // Test min/max Temperature Labels
     public void updateMinMaxTemp () {
         minTemp.setText("7°C");
         maxTemp.setText("39°C");
