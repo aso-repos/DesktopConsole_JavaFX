@@ -38,6 +38,7 @@ public class ConsoleView implements Initializable {
     private Label maxTemp;
 
     ConsoleLogic logic = new ConsoleLogic();
+    private WeatherService weatherService = new WeatherService();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -47,6 +48,7 @@ public class ConsoleView implements Initializable {
         // Set up timer and duration length and call method to be updated
         Timeline refreshDisplay = new Timeline(new KeyFrame(Duration.minutes(1), event -> {
             updateLeftDisplay();
+            setTemps();
         }));
 
         // Set initial date and time
@@ -56,10 +58,12 @@ public class ConsoleView implements Initializable {
         refreshDisplay.setCycleCount(Animation.INDEFINITE);
         refreshDisplay.play();
 
-        setWeatherIcon(logic.getWeatherIconName("snow"));
 
-        updateCurrentTemp();
-        updateMinMaxTemp();
+        // Set the weather icon on the right part of display
+        setWeatherDisplay();
+
+        // Set the Temperatures on the right part of display
+        setTemps();
 
     }
 
@@ -86,16 +90,20 @@ public class ConsoleView implements Initializable {
         weatherIcon.setImage(new Image(path));
     }
 
-    // Test current Temperature Label
-    public void updateCurrentTemp () {
-
-        currentTemp.setText("27°C");
+    public void setWeatherDisplay () {
+        setWeatherIcon(logic.getCurrentWeatherIcon());
     }
 
-    // Test min/max Temperature Labels
-    public void updateMinMaxTemp () {
-        minTemp.setText("7°C");
-        maxTemp.setText("39°C");
+
+
+    // Get temperatures for right hand display
+    public void setTemps () {
+
+        WeatherData weatherData = weatherService.getWeatherData();
+
+        currentTemp.setText(weatherData.getCurrentTemp() + "°C");
+        minTemp.setText(weatherData.getMinTemp() + "°C");
+        maxTemp.setText(weatherData.getMaxTemp() + "°C");
     }
 
 }

@@ -46,7 +46,7 @@
       </ImageView>
       <Label fx:id="currentTemp" layoutX="499.0" layoutY="99.0" prefHeight="67.0" prefWidth="134.0" text="34°C" textFill="#474747">
          <font>
-            <Font name="Roboto Medium" size="51.0" />
+            <Font name="Roboto Medium" size="40.0" />
          </font>
       </Label>
       <Label fx:id="minTemp" layoutX="450.0" layoutY="187.0" text="21°C" textFill="#474747">

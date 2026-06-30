@@ -3,6 +3,9 @@ import java.time.LocalDateTime;
 
 public class ConsoleLogic {
 
+    WeatherService weatherService = new WeatherService();
+    WeatherData weatherData = weatherService.getWeatherData();
+
     public String getCurrentDay () {
         String day = LocalDateTime.now().getDayOfWeek().toString();
         return day.substring(0,1).toUpperCase() + day.substring(1).toLowerCase();
@@ -37,6 +40,8 @@ public class ConsoleLogic {
         return hour + ":" + minute;
     }
 
+    // Get the weather right icon from WeatherAPI
+
     public String getWeatherIconName (String condition) {
 
         condition = condition.toLowerCase();
@@ -51,4 +56,9 @@ public class ConsoleLogic {
 
         return "No-Weather";
     }
+
+    public String getCurrentWeatherIcon() {
+        return getWeatherIconName("snow");
+    }
+
 }
