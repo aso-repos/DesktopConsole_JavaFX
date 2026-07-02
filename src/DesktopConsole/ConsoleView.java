@@ -60,7 +60,7 @@ public class ConsoleView implements Initializable {
 
 
         // Set the weather icon on the right part of display
-        setWeatherDisplay();
+        // setWeatherDisplay();
 
         // Set the Temperatures on the right part of display
         setTemps();
@@ -90,9 +90,9 @@ public class ConsoleView implements Initializable {
         weatherIcon.setImage(new Image(path));
     }
 
-    public void setWeatherDisplay () {
-        setWeatherIcon(logic.getCurrentWeatherIcon());
-    }
+//    public void setWeatherDisplay () {
+//        setWeatherIcon(logic.getCurrentWeatherIcon());
+//    }
 
 
 

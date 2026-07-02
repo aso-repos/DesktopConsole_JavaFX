@@ -32,7 +32,8 @@ public class WeatherService {
             double minTemp = minTempNode.asDouble();
             JsonNode maxTempNode = root.path("forecast").path("forecastday").path(0).path("day").path("maxtemp_c");
             double maxTemp = maxTempNode.asDouble();
-            return new WeatherData(currentTemp, minTemp, maxTemp, currentCondition);
+            int currentConditionCode = 1000;
+            return new WeatherData(currentTemp, minTemp, maxTemp, currentCondition, currentConditionCode);
         } catch (Exception e) {
             e.printStackTrace();
         }
