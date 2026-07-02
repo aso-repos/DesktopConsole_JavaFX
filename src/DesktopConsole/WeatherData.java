@@ -6,11 +6,13 @@ public class WeatherData {
     private double minTemp;
     private double maxTemp;
     private String currentCondition;
+    private int currentConditionCode;
 
-    public WeatherData(double currentTemp, double minTemp, double maxTemp, String currentCondition) {
+    public WeatherData(double currentTemp, double minTemp, double maxTemp, String currentCondition, int currentConditionCode) {
         this.currentTemp = currentTemp;
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
+        this.currentCondition = currentCondition;
         this.currentCondition = currentCondition;
     }
 
@@ -28,6 +30,10 @@ public class WeatherData {
 
     public String getCurrentCondition() {
         return currentCondition;
+    }
+
+    public int getCurrentConditionCode() {
+        return currentConditionCode;
     }
 
 }
