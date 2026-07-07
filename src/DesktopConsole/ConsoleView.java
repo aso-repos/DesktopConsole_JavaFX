@@ -48,11 +48,14 @@ public class ConsoleView implements Initializable {
         // Set up timer and duration length and call method to be updated
         Timeline refreshDisplay = new Timeline(new KeyFrame(Duration.minutes(1), event -> {
             updateLeftDisplay();
-            setTemps();
+            WeatherData weatherData = weatherService.getWeatherData();
+            setTemps(weatherData);
+            setWeatherDisplay(weatherData);
         }));
 
         // Set initial date and time
         updateLeftDisplay();
+
 
         // Run refreshDisplay indefinitely
         refreshDisplay.setCycleCount(Animation.INDEFINITE);
@@ -63,7 +66,9 @@ public class ConsoleView implements Initializable {
         // setWeatherDisplay();
 
         // Set the Temperatures on the right part of display
-        setTemps();
+        WeatherData weatherData = weatherService.getWeatherData();
+        setTemps(weatherData);
+        setWeatherDisplay(weatherData);
 
     }
 
@@ -90,16 +95,14 @@ public class ConsoleView implements Initializable {
         weatherIcon.setImage(new Image(path));
     }
 
-//    public void setWeatherDisplay () {
-//        setWeatherIcon(logic.getCurrentWeatherIcon());
-//    }
+    public void setWeatherDisplay (WeatherData weatherData) {
+        setWeatherIcon(logic.getCurrentWeatherIcon(weatherData.getCurrentConditionCode()));
+    }
 
 
 
     // Get temperatures for right hand display
-    public void setTemps () {
-
-        WeatherData weatherData = weatherService.getWeatherData();
+    public void setTemps (WeatherData weatherData) {
 
         currentTemp.setText(weatherData.getCurrentTemp() + "°C");
         minTemp.setText(weatherData.getMinTemp() + "°C");
