@@ -85,4 +85,27 @@ public class ConsoleLogic {
         return "No-Weather";
     }
 
+    public String getWeatherIconName (int conditionCode) {
+
+        if (conditionCode == 1000) {
+            return "Clear-Day";
+        } else if (conditionCode == 1030 || conditionCode == 1135 || conditionCode == 1147) {
+            return "Mist-Fog";
+        } else if (conditionCode == 1210 || conditionCode == 1213 || conditionCode == 1216
+                || conditionCode == 1219 || conditionCode == 1222 || conditionCode == 1225
+                || conditionCode == 1255 || conditionCode == 1258
+                || conditionCode == 1279 || conditionCode == 1282
+                || conditionCode == 1114 || conditionCode == 1117) {
+            return "Snow";
+        } else if (conditionCode == 1063 || conditionCode == 1150 || conditionCode == 1153
+                || conditionCode == 1180 || conditionCode == 1183 || conditionCode == 1186
+                || conditionCode == 1189 || conditionCode == 1192 || conditionCode == 1195
+                || conditionCode == 1240 || conditionCode == 1243 || conditionCode == 1246
+                || conditionCode == 1273 || conditionCode == 1276) {
+            return "Light-Rain";
+        }
+
+        return "No-Weather";
+    }
+
 }
