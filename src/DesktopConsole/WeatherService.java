@@ -30,11 +30,13 @@ public class WeatherService {
             System.out.println(currentCondition);
             JsonNode conditionCodeNode = root.path("current").path("condition").path("code");
             int currentConditionCode = conditionCodeNode.asInt();
+            JsonNode isDayNode = root.path("current").path("is_day");
+            int currentIsDay = isDayNode.asInt();
             JsonNode minTempNode = root.path("forecast").path("forecastday").path(0).path("day").path("mintemp_c");
             double minTemp = minTempNode.asDouble();
             JsonNode maxTempNode = root.path("forecast").path("forecastday").path(0).path("day").path("maxtemp_c");
             double maxTemp = maxTempNode.asDouble();
-            return new WeatherData(currentTemp, minTemp, maxTemp, currentCondition, currentConditionCode);
+            return new WeatherData(currentTemp, minTemp, maxTemp, currentCondition, currentConditionCode, currentIsDay);
         } catch (Exception e) {
             e.printStackTrace();
         }

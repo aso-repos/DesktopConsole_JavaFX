@@ -96,7 +96,7 @@ public class ConsoleView implements Initializable {
     }
 
     public void setWeatherDisplay (WeatherData weatherData) {
-        setWeatherIcon(logic.getCurrentWeatherIcon(weatherData.getCurrentConditionCode()));
+        setWeatherIcon(logic.getCurrentWeatherIcon(weatherData.getCurrentConditionCode(), weatherData.getCurrentIsDay()));
     }
 
 
