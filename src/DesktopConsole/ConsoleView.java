@@ -43,8 +43,6 @@ public class ConsoleView implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        Font.loadFont(getClass().getResourceAsStream("/fonts/Roboto-Medium.ttf"),12);
-
         // Set up timer and duration length and call method to be updated
         Timeline refreshDisplay = new Timeline(new KeyFrame(Duration.minutes(1), event -> {
             updateLeftDisplay();

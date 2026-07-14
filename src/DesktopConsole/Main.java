@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -12,6 +13,8 @@ public class Main extends Application {
 
     @Override
     public void start (Stage stage) throws Exception {
+
+        Font.loadFont(getClass().getResourceAsStream("/fonts/Roboto-Medium.ttf"),12);
 
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/DesktopConsole.fxml"));
 

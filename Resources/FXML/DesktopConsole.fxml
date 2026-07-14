@@ -44,7 +44,7 @@
             <Image url="@../images/Partly-Cloudy-Day.png" />
          </image>
       </ImageView>
-      <Label fx:id="currentTemp" layoutX="499.0" layoutY="99.0" prefHeight="67.0" prefWidth="134.0" text="34°C" textFill="#474747">
+      <Label fx:id="currentTemp" layoutX="493.0" layoutY="99.0" prefHeight="67.0" prefWidth="134.0" text="34°C" textFill="#474747">
          <font>
             <Font name="Roboto Medium" size="40.0" />
          </font>
