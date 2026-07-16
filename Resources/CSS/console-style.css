@@ -18,5 +18,15 @@
 .console-button:pressed {
     /* -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5),2,0.5,0,0); */
     -fx-background-image: url("/images/button-background-pressed.png");
+}
 
+.close-Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+}
+
+.close-Button:hover {
+    -fx-background-color: #e4e4e4;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #000000;
 }

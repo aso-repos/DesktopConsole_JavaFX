@@ -23,7 +23,7 @@ public class Main extends Application {
         stage.setScene(scene);
 
         stage.setResizable(false);
-        //stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
 
 

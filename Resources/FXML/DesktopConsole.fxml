@@ -7,18 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="647.0" prefWidth="700.0" stylesheets="@../CSS/console-style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DesktopConsole.ConsoleView">
+<AnchorPane prefHeight="398.0" prefWidth="700.0" style="-fx-background-color: transparent;" stylesheets="@../CSS/console-style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DesktopConsole.ConsoleView">
    <children>
-      <ImageView fitHeight="647.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="647.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent;">
          <image>
-            <Image url="@../images/Personal Dashboard Final.png" />
+            <Image url="@../images/Personal%20Dashboard%20Final.png" />
          </image>
       </ImageView>
-      <Button fx:id="helloButton" layoutX="64.0" layoutY="457.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="49.0" prefWidth="67.0" styleClass="console-button" text="Hello">
-         <font>
-            <Font name="Nunito Medium" size="17.0" />
-         </font>
-      </Button>
       <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="TOP" layoutX="101.0" layoutY="290.0" prefHeight="24.0" prefWidth="497.0" text="Waiting For Information" textAlignment="CENTER">
          <font>
             <Font name="Nunito Regular" size="14.0" />
@@ -59,5 +54,10 @@
             <Font name="Roboto Medium" size="25.0" />
          </font>
       </Label>
+      <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="660.0" mnemonicParsing="false" onAction="#onCloseClicked" prefHeight="40.0" prefWidth="40.0" styleClass="close-Button" stylesheets="@../FXML/DesktopConsole.fxml" text="X">
+         <font>
+            <Font name="MediaPlayer" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

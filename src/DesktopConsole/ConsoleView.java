@@ -21,8 +21,8 @@ public class ConsoleView implements Initializable {
     @FXML
     private Button helloButton;
     @FXML
-    private Label infoLabel;
-    @FXML
+//    private Label infoLabel;
+//    @FXML
     private Label dayLabel;
     @FXML
     private Label dateLabel;
@@ -36,6 +36,8 @@ public class ConsoleView implements Initializable {
     private Label minTemp;
     @FXML
     private Label maxTemp;
+    @FXML
+    private Button closeButton;
 
     ConsoleLogic logic = new ConsoleLogic();
     private WeatherService weatherService = new WeatherService();
@@ -82,11 +84,11 @@ public class ConsoleView implements Initializable {
         timeLabel.setText(currentTime);
     }
 
-    @FXML
-    public void infoButtonClicked (ActionEvent event) {
-
-        infoLabel.setText("Congratulations, this will be your future Reminder Bar");
-    }
+//    @FXML
+//    public void infoButtonClicked (ActionEvent event) {
+//
+//        infoLabel.setText("Congratulations, this will be your future Reminder Bar");
+//    }
 
     public void setWeatherIcon (String newIcon) {
         String path = "/images/" + newIcon + ".png";
@@ -105,6 +107,13 @@ public class ConsoleView implements Initializable {
         currentTemp.setText(weatherData.getCurrentTemp() + "°C");
         minTemp.setText(weatherData.getMinTemp() + "°C");
         maxTemp.setText(weatherData.getMaxTemp() + "°C");
+    }
+
+    // Logic for exiting app when "X" is clicked
+    @FXML
+    public void onCloseClicked (ActionEvent event) {
+
+        javafx.application.Platform.exit();
     }
 
 }
