@@ -15,6 +15,7 @@ public class Main extends Application {
     public void start (Stage stage) throws Exception {
 
         Font.loadFont(getClass().getResourceAsStream("/fonts/Roboto-Medium.ttf"),12);
+        Font.loadFont(getClass().getResourceAsStream("/fonts/Nunito-Bold.ttf"),12);
 
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/DesktopConsole.fxml"));
 

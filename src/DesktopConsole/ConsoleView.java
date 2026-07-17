@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
@@ -38,6 +39,10 @@ public class ConsoleView implements Initializable {
     private Label maxTemp;
     @FXML
     private Button closeButton;
+    @FXML
+    private AnchorPane dragZone;
+    private double playerXOffset = 0;
+    private double playerYOffset = 0;
 
     ConsoleLogic logic = new ConsoleLogic();
     private WeatherService weatherService = new WeatherService();
@@ -69,6 +74,20 @@ public class ConsoleView implements Initializable {
         WeatherData weatherData = weatherService.getWeatherData();
         setTemps(weatherData);
         setWeatherDisplay(weatherData);
+
+        // Set up logic for grabbing and moving player when "dragZone" is clicked
+        dragZone.setOnMousePressed(event -> {
+            playerXOffset = event.getSceneX();
+            playerYOffset = event.getSceneY();
+        });
+
+        dragZone.setOnMouseDragged(event -> {
+            dragZone.getScene().getWindow().setX(event.getScreenX() - playerXOffset);
+            dragZone.getScene().getWindow().setY(event.getScreenY() - playerYOffset);
+        });
+
+        dragZone.setOnMouseEntered(event -> dragZone.setCursor(javafx.scene.Cursor.MOVE));
+        dragZone.setOnMouseExited(event -> dragZone.setCursor(javafx.scene.Cursor.DEFAULT));
 
     }
 
