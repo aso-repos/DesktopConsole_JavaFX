@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DesktopConsole:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DesktopConsole_jar</output-path>
+    <root id="archive" name="UnitConverter.jar">
+      <element id="module-output" name="UnitConverter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DesktopConsole Files/Jackson/jackson-annotations-2.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DesktopConsole Files/Jackson/jackson-core-2.21.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DesktopConsole Files/Jackson/jackson-databind-2.1.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
