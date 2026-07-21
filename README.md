@@ -21,10 +21,9 @@ Key goals:
 
 ## 🖼️ Screenshots
 
-**Console Layout (Initial Implementation)**
+
 <img src="Resources/images/Personal-Dashboard-Template.png" alt="Original Calculator" width="45%">
-  &nbsp; &nbsp; &nbsp;
-*(Add screenshot once ready)*
+Console Layout (Initial Implementation)
 
 ---
 
