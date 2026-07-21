@@ -22,8 +22,11 @@ Key goals:
 ## 🖼️ Screenshots
 
 
-<img src="Resources/images/Personal-Dashboard-Template.png" alt="Original Calculator" width="45%">
-Console Layout (Initial Implementation)
+<img src="Resources/images/Personal-Dashboard-Template.png" alt="Original Console Concept" width="45%">
+Console Layout (Initial Concept)
+<br><br>
+<img src="Resources/images/Final-Console.png" alt="Final Console" width="45%">
+Final Console Layout (Bottom strip omitted for Version 1)
 
 ---
 
