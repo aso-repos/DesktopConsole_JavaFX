@@ -22,7 +22,7 @@ Key goals:
 ## 🖼️ Screenshots
 
 **Console Layout (Initial Implementation)**
-![Console Layout](Images/Personal%20Dashboard%20Template.png)
+![Console Layout](Images/Personal-0Dashboard-Template.png)
 *(Add screenshot once ready)*
 
 ---
